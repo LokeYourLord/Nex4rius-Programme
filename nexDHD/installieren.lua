@@ -1,6 +1,6 @@
 -- pastebin run -f YVqKFnsP
 -- nexDHD von Nex4rius
--- https://github.com/Nex4rius/Nex4rius-Programme/tree/master/nexDHD
+-- https://github.com/LokeYourLord/Nex4rius-Programme/tree/master/nexDHD
 
 OC = nil
 CC = nil
@@ -135,11 +135,11 @@ end
 
 function f.Pfad(versionTyp)
   if versionTyp == "beta" then
-    return "https://raw.githubusercontent.com/Nex4rius/Nex4rius-Programme/nexDHD/nexDHD/"
+    return "https://raw.githubusercontent.com/LokeYourLord/Nex4rius-Programme/nexDHD/nexDHD/"
   elseif versionTyp then
-    return "https://raw.githubusercontent.com/Nex4rius/Nex4rius-Programme/" .. versionTyp .. "/nexDHD/"
+    return "https://raw.githubusercontent.com/LokeYourLord/Nex4rius-Programme/" .. versionTyp .. "/nexDHD/"
   else
-    return "https://raw.githubusercontent.com/Nex4rius/Nex4rius-Programme/master/nexDHD/"
+    return "https://raw.githubusercontent.com/LokeYourLord/Nex4rius-Programme/master/nexDHD/"
   end
 end
 
@@ -157,9 +157,9 @@ end
 function f.schreibAutorun()
   local d = io.open("/autorun.lua", "w")
   d:write([[
-  -- pastebin run -f YVqKFnsP
+  -- pastebin run -f YeJmtyx7
   -- nexDHD von Nex4rius
-  -- https://github.com/Nex4rius/Nex4rius-Programme/tree/master/nexDHD
+  -- https://github.com/LokeYourLord/Nex4rius-Programme/tree/master/nexDHD
 
   local shell = shell or require("shell")
   local alterPfad
@@ -180,11 +180,11 @@ function f.schreibAutorun()
       print(grund)
       os.sleep(2)
       if require then
-          if loadfile("/bin/wget.lua")("-f", "https://raw.githubusercontent.com/Nex4rius/Nex4rius-Programme/master/nexDHD/installieren.lua", "/installieren.lua") then
+          if loadfile("/bin/wget.lua")("-f", "https://raw.githubusercontent.com/LokeYourLord/Nex4rius-Programme/master/nexDHD/installieren.lua", "/installieren.lua") then
               loadfile("/installieren.lua")()
           end
       else
-          shell.run("pastebin run -f YVqKFnsP")
+          shell.run("pastebin run -f YeJmtyx7")
       end
   end
   
@@ -335,7 +335,7 @@ function f.installieren(versionTyp)
 end
 
 if OC and (component.isAvailable("tablet") or arg == "gdo" or arg == "tablet")then
-  while not wget("-f", "https://raw.githubusercontent.com/Nex4rius/Nex4rius-Programme/master/nexDHD/gdo.lua", "/autorun.lua") do end
+  while not wget("-f", "https://raw.githubusercontent.com/LokeYourLord/Nex4rius-Programme/master/nexDHD/gdo.lua", "/autorun.lua") do end
   require("computer").shutdown(true)
 end
 
@@ -348,7 +348,7 @@ if versionTyp == nil then
       d:write([[
         -- pastebin run -f YVqKFnsP
         -- nexDHD von Nex4rius
-        -- https://github.com/Nex4rius/Nex4rius-Programme/tree/master/nexDHD
+        -- https://github.com/LokeYourLord/Nex4rius-Programme/tree/master/nexDHD
         
         wget("-f", f.Pfad(versionTyp) .. "installieren.lua", "/installieren.lua")
         loadfile("/installieren.lua")()
@@ -362,7 +362,7 @@ if versionTyp == nil then
         -- nexDHD von Nex4rius
         -- https://github.com/Nex4rius/Nex4rius-Programme/tree/master/nexDHD
         
-        shell.run("pastebin run -f YVqKFnsP")
+        shell.run("pastebin run -f YeJmtyx7")
       ]])
     end
     d:close()
