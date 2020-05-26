@@ -21,9 +21,7 @@ local type                      = type
 local require                   = require
 local loadfile                  = loadfile
 
-local component = require("component")
-local sides = require("sides")
-
+local component                 = {}
 local event                     = {}
 local Farben                    = {}
 local term                      = term or require("term")
@@ -1857,6 +1855,7 @@ function o.sgChevronEngaged(eventname, compadresse, chevron, symbol)
   component.redstone.setOutput(sides.right, 15)
   os.sleep(1)
   component.redstone.setOutput(sides.right, 0)
+  end
   
   if chevron == 7 or chevron == 9 then
     for i = 0, 5 do
