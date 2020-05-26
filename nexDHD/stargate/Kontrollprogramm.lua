@@ -25,7 +25,6 @@ local component = require("component")
 local redstone = component.redstone
 local sides = require("sides")
 
-local component                 = {}
 local event                     = {}
 local Farben                    = {}
 local term                      = term or require("term")
