@@ -1852,6 +1852,9 @@ function o.sgChevronEngaged(eventname, compadresse, chevron, symbol)
   end
   
   f.zeigeNachricht(string.format("Chevron %s %s! <%s>", chevron, sprachen.aktiviert, zielAdresse))
+  component.redstone.setOutput(sides.right, 15)
+  os.sleep(1)
+  component.redstone.setOutput(sides.right, 15)
   
   if chevron == 7 or chevron == 9 then
     for i = 0, 5 do
